@@ -1,0 +1,110 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: #000 ;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    width: 100%;
+}
+div{
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50% );
+    width: 280px;
+    height: 420px;
+    background: none;
+    border: 1px solid#338033;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 2%;
+}
+.wdh input{
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+.texs{
+    border: none;
+    border-bottom: 1px solid#338033;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+h1{
+    margin-top: -10px;
+    border-bottom: 6px solid #338033;
+    height: 40px;
+    float: left;
+    font-size: 40px;
+    padding: 13px 0;
+
+}
+.pass{
+    border: none;
+    border-bottom: 1px solid #338033;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+input{
+        background: none;
+        color: #ccc;
+        width: 240px;
+        height: 80px;
+        border: 1px solid #338033;
+        font-size: 18px;
+        border-radius: 4px;
+        transition: .6s;
+        overflow: hidden;
+        position: absolute;
+
+}
+input::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgb(255, 255, 255,.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.6s;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+input::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgb(255, 255, 255,.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translate(-100px) scaleX(-15deg);
+}
+input:hover{
+    background: #338033;
+    cursor: pointer;
+
+}
+input:hover::before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+}
+input:hover::after{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+}
